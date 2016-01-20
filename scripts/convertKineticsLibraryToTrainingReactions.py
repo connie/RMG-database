@@ -39,13 +39,15 @@ if __name__ == '__main__':
 
     print 'Loading {0} library'.format(libraryName)
     kineticLibrary = database.kinetics.libraries[libraryName]
+    kineticFamily = database.kinetics.families['H_Abstraction']
     
     reactionList = []    
     for index, entry in kineticLibrary.entries.iteritems():
         reaction = entry.item
         reaction.kinetics = entry.data
         # Let's make RMG try to generate this reaction from the families!
-        rmgReactionList = database.kinetics.generateReactionsFromFamilies(reactants=reaction.reactants, products=reaction.products):
+        kineticFamily.saveTrainingReaction('stuff.py', reaction)
+        rmgReactionList = database.kinetics.generateReactionsFromFamilies(reactants=reaction.reactants, products=reaction.products)
         if len(rmgReactionList) == 1:
             print "Great! We only have one match, lets create a training reaction for this."
             rmgReaction = rmgReactionList[0]
