@@ -36,28 +36,37 @@ if __name__ == '__main__':
     database = RMGDatabase()
     database.load(settings['database.directory'], kineticsFamilies='all', kineticsDepositories='all')
     
+    reactionDict = {}
+    for libraryName in args.library:
+        print 'Loading {0} library'.format(libraryName)
+        kineticLibrary = database.kinetics.libraries[libraryName]
+        for index, entry in kineticLibrary.entries.iteritems():
+            reaction = entry.item
+            reaction.kinetics = entry.data
+            # Let's make RMG try to generate this reaction from the families!
+            rmgReactionList = database.kinetics.generateReactionsFromFamilies(reactants=reaction.reactants, products=reaction.products)
+            if len(rmgReactionList) == 1:
+                print "Great! We only have one match, lets create a training reaction for this."
+                rmgReaction = rmgReactionList[0]
+                # kineticFamily = database.kinetics.families[rmgReaction.family]
+                # kineticFamily.saveTrainingReaction('stuff.py', reaction)
+                if rmgReaction.family in reactionDict
+                    reactionDict[rmgReaction.family].append(rmgReaction)
+                else:
+                    reactionDict[rmgReaction.family] = [rmgReaction]
+            elif len(rmgReactionList) == 0:
+                print "Sad :( There are no matches.  This is a magic reaction or has chemistry that should be made into a new reaction family"
+            else:
+                print "There are multiple RMG matches for this reaction. You have to manually create this training reaction"
 
-    print 'Loading {0} library'.format(libraryName)
-    kineticLibrary = database.kinetics.libraries[libraryName]
-    kineticFamily = database.kinetics.families['H_Abstraction']
-    
-    reactionList = []    
-    for index, entry in kineticLibrary.entries.iteritems():
-        reaction = entry.item
-        reaction.kinetics = entry.data
-        # Let's make RMG try to generate this reaction from the families!
-        kineticFamily.saveTrainingReaction('stuff.py', reaction)
-        rmgReactionList = database.kinetics.generateReactionsFromFamilies(reactants=reaction.reactants, products=reaction.products)
-        if len(rmgReactionList) == 1:
-            print "Great! We only have one match, lets create a training reaction for this."
-            rmgReaction = rmgReactionList[0]
-        elif len(rmgReactionList) == 0:
-            print "Sad :( There are no matches.  This is a magic reaction or has chemistry that should be made into a new reaction family"
-        else:
-            print "There are multiple RMG matches for this reaction. You have to manually create this training reaction"
+    for familyName in reactionDict:
+        print 'Adding training reactions for family: ' + familyName
+        kineticFamily = database.kinetics.families[familyName]
+        reactions = reactionDict[familyName]
+        # save training reactions of one family
+        kineticFamily.saveTrainingReaction(reactions)
+        break
 
-
-    #reactions=rdatabase.kinetics.families[reactionFamily].generateReactions(reactantList)
             
     
     
