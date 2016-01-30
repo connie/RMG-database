@@ -25,6 +25,62 @@ from rmgpy import settings
     
 ################################################################################
 
+def addAtomLabelsForReaction(fam_rxn, database):
+    from rmgpy.species import Species
+    # prepare fam_rxts_mol and fam_pdts_mol
+    reactants = [rxt.molecule[0] for rxt in fam_rxn.reactants]            
+    products = [pdt.molecule[0] for pdt in fam_rxn.products]
+    # prepare fam_forward_template always forward for fam_rxn
+    # because __createReaction always make sure fam_rxn is in forward style
+    family = database.kinetics.families[fam_rxn.family]
+    template = family.forwardTemplate
+    # Unimolecular reactants: A --> products
+    if len(reactants) == 1 and len(template.reactants) == 1:
+        labeledReactants, labeledProducts = family.getLabeledReatantsAndProdcuts(reactants, products)
+        labeledProducts_spcs = []
+        labeledReactants_spcs = []
+        if labeledProducts is not None:
+            for labeledProduct in labeledProducts:
+                labeledProducts_spcs.append(Species(molecule=[labeledProduct]))
+            fam_rxn.products = labeledProducts_spcs
+        if labeledReactants is not None:
+            for labeledReactant in labeledReactants:
+                labeledReactants_spcs.append(Species(molecule=[labeledReactant]))
+            fam_rxn.reactants = labeledReactants_spcs
+
+
+    # Bimolecular reactants: A + B --> products
+    elif len(reactants) == 2 and len(template.reactants) == 2:
+        # Reactants stored as A + B
+        labeledReactants, labeledProducts = family.getLabeledReatantsAndProdcuts(reactants, products)
+        labeledProducts_spcs = []
+        labeledReactants_spcs = []
+        if labeledProducts is not None:
+            for labeledProduct in labeledProducts:
+                labeledProducts_spcs.append(Species(molecule=[labeledProduct]))
+            fam_rxn.products = labeledProducts_spcs
+        if labeledReactants is not None:
+            for labeledReactant in labeledReactants:
+                labeledReactants_spcs.append(Species(molecule=[labeledReactant]))
+            fam_rxn.reactants = labeledReactants_spcs
+
+        # Only check for swapped reactants if they are different
+        if reactants[0] is not reactants[1]:
+
+            # Reactants stored as B + A
+            reactants_rev = list(reversed(reactants))
+            labeledReactants, labeledProducts = family.getLabeledReatantsAndProdcuts(reactants_rev, products)
+            labeledProducts_spcs = []
+            labeledReactants_spcs = []
+            if labeledProducts is not None:
+                for labeledProduct in labeledProducts:
+                    labeledProducts_spcs.append(Species(molecule=[labeledProduct]))
+                fam_rxn.products = labeledProducts_spcs
+            if labeledReactants is not None:
+                for labeledReactant in labeledReactants:
+                    labeledReactants_spcs.append(Species(molecule=[labeledReactant]))
+                fam_rxn.reactants = labeledReactants_spcs
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('library', metavar='LIBRARYNAME', type=str, nargs=1,
