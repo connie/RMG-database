@@ -106,7 +106,7 @@ if __name__ == '__main__':
                 rmgReaction = rmgReactionList[0]
                 # kineticFamily = database.kinetics.families[rmgReaction.family]
                 # kineticFamily.saveTrainingReaction('stuff.py', reaction)
-                if rmgReaction.family in reactionDict
+                if rmgReaction.family in reactionDict:
                     reactionDict[rmgReaction.family].append(rmgReaction)
                 else:
                     reactionDict[rmgReaction.family] = [rmgReaction]
