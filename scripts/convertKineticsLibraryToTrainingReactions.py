@@ -36,7 +36,7 @@ def addAtomLabelsForReaction(fam_rxn, database):
     template = family.forwardTemplate
     # Unimolecular reactants: A --> products
     if len(reactants) == 1 and len(template.reactants) == 1:
-        labeledReactants, labeledProducts = family.getLabeledReatantsAndProdcuts(reactants, products)
+        labeledReactants, labeledProducts = family.getLabeledReactantsAndProducts(reactants, products)
         labeledProducts_spcs = []
         labeledReactants_spcs = []
         if labeledProducts is not None:
@@ -52,7 +52,7 @@ def addAtomLabelsForReaction(fam_rxn, database):
     # Bimolecular reactants: A + B --> products
     elif len(reactants) == 2 and len(template.reactants) == 2:
         # Reactants stored as A + B
-        labeledReactants, labeledProducts = family.getLabeledReatantsAndProdcuts(reactants, products)
+        labeledReactants, labeledProducts = family.getLabeledReactantsAndProducts(reactants, products)
         labeledProducts_spcs = []
         labeledReactants_spcs = []
         if labeledProducts is not None:
@@ -69,7 +69,7 @@ def addAtomLabelsForReaction(fam_rxn, database):
 
             # Reactants stored as B + A
             reactants_rev = list(reversed(reactants))
-            labeledReactants, labeledProducts = family.getLabeledReatantsAndProdcuts(reactants_rev, products)
+            labeledReactants, labeledProducts = family.getLabeledReactantsAndProducts(reactants_rev, products)
             labeledProducts_spcs = []
             labeledReactants_spcs = []
             if labeledProducts is not None:
