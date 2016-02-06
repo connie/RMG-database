@@ -14,6 +14,7 @@ THERMOLIBRARYNAME      the thermo library's name in your RMG-database thermo lib
 import argparse
 import os
 from rmgpy.data.thermo import ThermoLibrary
+from rmgpy.data.rmg import RMGDatabase
 from rmgpy import settings
           
 if __name__ == '__main__':
@@ -25,16 +26,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
     libraryName = args.thermoLibraryName[0]
     
-    library = ThermoLibrary()
-    library.loadOld(
-        dictstr = os.path.join(inputPath, 'Dictionary.txt'),
-        treestr = '',
-        libstr = os.path.join(inputPath, 'Library.txt'),
-        numParameters = 12,
-        numLabels = 1,
-        pattern = False,
-    )
-    library.name = libraryName
+    database = RMGDatabase()
+    database.load(settings['database.directory'], thermoLibraries = [libraryName], kineticsFamilies='none', kineticsDepositories='none', reactionLibraries=[])
 
-    # Save in Py format    
-    library.save(os.path.join(settings['database.directory'], 'thermo', 'libraries', libraryName+'.py'))
+    thermoDatabase = database.thermo
+    thermoLibrary = database.thermo.libraries[libraryName]
