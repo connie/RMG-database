@@ -2222,6 +2222,23 @@ entry(
 )
 
 entry(
+    index = 208,
+    label = "doublebond_intra_HDe_secDe_benzene",
+    group = 
+"""
+1 *2 Cd u0 {2,D} {3,S}
+2 *3 Cd u0 {1,D} {4,S} {5,S}
+3    Cd u0 {1,S} {7,D}
+4    H  u0 {2,S}
+5    Cd u0 {2,S} {6,D} 
+6    Cd u0 {5,D} {7,S}
+7    Cd u0 {6,S} {3,D}
+""",
+    kinetics = None,
+)
+
+
+entry(
     index = 209,
     label = "doublebond_intra_NdNd",
     group = 
@@ -2885,6 +2902,7 @@ L1: multiplebond_intra
                 L5: doublebond_intra_HCt_pri
             L4: doublebond_intra_HDe_secNd
             L4: doublebond_intra_HDe_secDe
+                L5: doublebond_intra_HDe_secDe_benzene
         L3: doublebond_intra_NdNd
             L4: doublebond_intra_NdNd_pri
             L4: doublebond_intra_NdNd_secNd
