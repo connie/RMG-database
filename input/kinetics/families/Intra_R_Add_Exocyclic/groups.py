@@ -2976,3 +2976,491 @@ u"""
 """,
 )
 
+forbidden(
+    label = "R4_B",
+    group = 
+"""
+1 *1 Cd u1 {2,D} {6,S}
+2 *4 Cd u[0,1] {1,D} {3,S}
+3 *2 Cd u0 {2,S} {4,D}
+4 *3 Cd u0 {3,D} {5,S}
+5    Cd u[0,1] {4,S} {6,D}
+6    Cd u[0,1] {5,D} {1,S}
+""",
+    shortDesc = u"""R4_benzene""",
+    longDesc = 
+u"""
+Ban internal cyclization within a benzene ring. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R4_B_1endo",
+    group = 
+"""
+1     Cd u[0,1] {2,D} {6,S}
+2     Cd u[0,1] {1,D} {3,S}
+3     Cd u[0,1] {2,S} {4,D}
+4  *4 Cd u[0,1] {3,D} {5,S}
+5  *2 Cd u0 {4,S} {6,D}
+6  *3 Cd u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R4_benzene_1endo""",
+    longDesc = 
+u"""
+Ban endo cyclization on benzene ring.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label = "R5_B",
+    group = 
+"""
+1 *1 Cd   u1 {2,S} {6,D}
+2 *4 Cd   u[0,1] {1,S} {3,D}
+3 *5 Cd   u[0,1] {2,D} {4,S}
+4 *2 Cd   u0 {3,S} {5,D} 
+5 *3 Cd   u0 {4,D} {6,S}
+6  Cd    u[0,1] {5,S} {1,D}
+""",
+    shortDesc = u"""R5_benzene""",
+    longDesc = 
+u"""
+Ban internal cyclization within a benzene ring.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label = "R5_B_1endo",
+    group = 
+"""
+1    Cd   u[0,1] {2,S} {6,D}
+2 *4 Cd   u[0,1] {1,S} {3,D}
+3 *5 Cd   u[0,1] {2,D} {4,S}
+4 *2 Cd   u0 {3,S} {5,D} 
+5 *3 Cd   u0 {4,D} {6,S}
+6  Cd    u[0,1] {5,S} {1,D}
+""",
+    shortDesc = u"""R5_benzene_1endo""",
+    longDesc = 
+u"""
+Ban R5 endo cyclization on benzene ring with one dangling carbon.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R5_B_2endo",
+    group = 
+"""
+1    Cd   u[0,1] {2,S} {6,D}
+2    Cd   u[0,1] {1,S} {3,D}
+3 *5 Cd   u[0,1] {2,D} {4,S}
+4 *2 Cd   u0 {3,S} {5,D} 
+5 *3 Cd   u0 {4,D} {6,S}
+6  Cd    u[0,1] {5,S} {1,D}
+""",
+    shortDesc = u"""R5_benzene_2endo""",
+    longDesc = 
+u"""
+Ban R5 endo cyclization on benzene ring with two dangling carbons.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label = "R6_B",
+    group = 
+"""
+1 *1 Cd    u1 {2,D} {6,S}
+2 *4 Cd    u[0,1] {1,D} {3,S}
+3 *6 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R6_benzene""",
+    longDesc = 
+u"""
+Ban internal cyclization within a benzene ring.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R6_B_1endo",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2 *4 Cd    u[0,1] {1,D} {3,S}
+3 *6 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R6_benzene_1endo""",
+    longDesc = 
+u"""
+Ban R6 endo cyclization on benzene ring with one dangling carbon.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R6_B_2endo",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2    Cd    u[0,1] {1,D} {3,S}
+3 *6 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R6_benzene_2endo""",
+    longDesc = 
+u"""
+Ban R6 endo cyclization on benzene ring with two dangling carbons.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label = "R7_B",
+    group = 
+"""
+1 *4 Cd    u[0,1] {2,D} {6,S}
+2 *6 Cd    u[0,1] {1,D} {3,S}
+3 *7 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R7_benzene""",
+    longDesc = 
+u"""
+Ban endo cyclization. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R7_B_endo1",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2 *6 Cd    u[0,1] {1,D} {3,S}
+3 *7 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R7_benzene_endo1""",
+    longDesc = 
+u"""
+Ban endo cyclization. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R7_B_endo2",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2    Cd    u[0,1] {1,D} {3,S}
+3 *7 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R7_benzene_endo2""",
+    longDesc = 
+u"""
+Ban endo cyclization. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+
+forbidden(
+    label = "R8_B",
+    group = 
+"""
+1 *6 Cd    u[0,1] {2,D} {6,S}
+2 *7 Cd    u[0,1] {1,D} {3,S}
+3 *8 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R7_benzene""",
+    longDesc = 
+u"""
+Ban endo cyclization.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R8_B_endo1",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2 *7 Cd    u[0,1] {1,D} {3,S}
+3 *8 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R8_benzene_endo1""",
+    longDesc = 
+u"""
+Ban endo cyclization.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label = "R8_B_endo2",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2    Cd    u[0,1] {1,D} {3,S}
+3 *8 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R8_benzene_endo2""",
+    longDesc = 
+u"""
+Ban endo cyclization.  
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label = "R9_B",
+    group = 
+"""
+1 *7 Cd    u[0,1] {2,D} {6,S}
+2 *8 Cd    u[0,1] {1,D} {3,S}
+3 *9 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R7_benzene""",
+    longDesc = 
+u"""
+Ban endo cyclization. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R9_B_endo1",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2 *8 Cd    u[0,1] {1,D} {3,S}
+3 *9 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R9_benzene_endo1""",
+    longDesc = 
+u"""
+Ban endo cyclization. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R9_B_endo2",
+    group = 
+"""
+1    Cd    u[0,1] {2,D} {6,S}
+2    Cd    u[0,1] {1,D} {3,S}
+3 *9 Cd    u[0,1] {2,S} {4,D}
+4 *5 Cd    u[0,1] {3,D} {5,S}
+5 *2 Cd    u0 {4,S} {6,D} 
+6 *3 Cd    u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R9_benzene_endo1""",
+    longDesc = 
+u"""
+Ban endo cyclization. 
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label = "R6_B_isomer",
+    group = 
+"""
+1 *3 Cd u0 {2,S} {3,D}
+2 *1 Cs u1 {1,S} {5,S}
+3 *2 Cd u0 {1,D} {4,S}
+4 *5 Cd ux {3,S} {6,D}
+5 *4 Cd ux {2,S} {6,D}
+6 *6 Cdd u0 {4,D} {5,D}
+""",
+    shortDesc = u"""R4_benzene_isomer""",
+    longDesc = 
+u"""
+Ban internal cyclization within a phenyl radical isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+
+forbidden(
+    label = "R5_B_isomer",
+    group = 
+"""
+1 *4 Cd ux {2,S} {3,D}
+2 *1 Cs u1 {1,S} {5,S}
+3 *5 Cd ux {1,D} {4,S}
+4 *2 Cd u0 {3,S} {6,D}
+5 Cd ux {2,S} {6,D}
+6 *3 Cdd u0 {4,D} {5,D}
+""",
+    shortDesc = u"""R4_benzene_isomer""",
+    longDesc = 
+u"""
+Ban internal cyclization within a phenyl radical isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label='benzyl_isomer1_endo1',
+    group = 
+"""
+1 *4 Cd u0 {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *2 Cd u0 {1,S} {6,D}
+4 Cd ux {2,S} {5,D}
+5 Cd ux {4,D} {6,S}
+6 *3 Cd u0 {3,D} {5,S}
+7 Cd ux {1,D}
+""",
+    longDesc = 
+u"""
+Ban internal cyclization in benzyl isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label='benzyl_isomer1_endo2',
+    group = 
+"""
+1 *4 Cd u0 {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *6 Cd ux {1,S} {6,D}
+4 *3 Cd u0 {2,S} {5,D}
+5 *2 Cd u0 {4,D} {6,S}
+6 *5 Cd ux {3,D} {5,S}
+7 Cd ux {1,D}
+""",
+    longDesc = 
+u"""
+Ban internal cyclization in benzyl isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+forbidden(
+    label='benzyl_isomer1_endo3',
+    group = 
+"""
+1   Cd u0 {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *3  Cd u0 {1,S} {6,D}
+4 *4 Cd ux {2,S} {5,D}
+5 *5 Cd ux {4,D} {6,S}
+6 *2 Cd u0 {3,D} {5,S}
+7 Cd ux {1,D}
+""",
+    longDesc = 
+u"""
+Ban internal cyclization in benzyl isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label='benzyl_isomer1_endo4',
+    group = 
+"""
+1  *2 Cd u0 {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *5  Cd u0 {1,S} {6,D}
+4 *4 Cd ux {2,S} {5,D}
+5 *6 Cd ux {4,D} {6,S}
+6 *7 Cd u0 {3,D} {5,S}
+7 *3 Cd ux {1,D}
+""",
+    longDesc = 
+u"""
+Ban internal cyclization in benzyl isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+
+
+forbidden(
+    label='benzyl_isomer2_endo1',
+    group = 
+"""
+1 *2 Cd u0 {2,S} {3,S} {7,D}
+2 *5 Cd ux {1,S} {4,D}
+3 Cd ux {1,S} {6,D}
+4 *4 Cd ux {2,D} {5,S}
+5 *1 Cs u1 {4,S} {6,S}
+6 Cd ux {3,D} {5,S}
+7 *3 Cd u0 {1,D}
+""",
+    longDesc = 
+u"""
+Ban internal cyclization in benzyl isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
+
+forbidden(
+    label='benzyl_isomer2_endo2',
+    group = 
+"""
+1 *5 Cd u0 {2,S} {3,S} {7,D}
+2 *6 Cd ux {1,S} {4,D}
+3 *2 Cd u0 {1,S} {6,D}
+4 *4 Cd ux {2,D} {5,S}
+5 *1 Cs u1 {4,S} {6,S}
+6 *3 Cd u0 {3,D} {5,S}
+7  Cd ux {1,D}
+""",
+    longDesc = 
+u"""
+Ban internal cyclization in benzyl isomer.
+Intra_R_Add_Endocyclic duplicates this reaction.
+""",
+)
