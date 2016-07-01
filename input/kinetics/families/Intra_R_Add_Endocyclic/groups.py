@@ -70,6 +70,29 @@ entry(
     kinetics = None,
 )
 
+
+entry(
+    index = 5,
+    label = "R3_B",
+    group = 
+"""
+1      Cd ux {2,D} {6,S}
+2      Cd ux {1,D} {3,S}
+3      Cd ux {2,S} {4,D}
+4  *1  Cd u1 {3,D} {5,S}
+5  *2  Cd u0 {4,S} {6,D}
+6  *3  Cd u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R3_benzene""",
+    longDesc = 
+u"""
+Internal cyclization within a benzene ring. Should be extremely slow
+in forward direction.
+""",    
+    kinetics = None,
+)
+
+
 entry(
     index = 6,
     label = "R3_T",
@@ -115,6 +138,27 @@ entry(
 2 *4 R!H                 ux {1,[S,D,T,B]} {3,S}
 3 *2 [Cd,Ct,CO,N,CS]     u0 {2,S} {4,[D,T]}
 4 *3 [Cd,Ct,Od,Sd,Cdd,N] u0 {3,[D,T]}
+""",
+    kinetics = None,
+)
+
+entry(
+    index = 9,
+    label = "R4_B",
+    group = 
+"""
+1      Cd ux {2,D} {6,S}
+2      Cd ux {1,D} {3,S}
+3  *1  Cd u1 {2,S} {4,D}
+4  *4  Cd ux {3,D} {5,S}
+5  *2  Cd u0 {4,S} {6,D}
+6  *3  Cd u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R4_benzene""",
+    longDesc = 
+u"""
+Internal cyclization within a phenyl ring.  Should be extremely slow
+in the forward direction.
 """,
     kinetics = None,
 )
@@ -2277,10 +2321,12 @@ tree(
 L1: Rn
     L2: R3
         L3: R3_D
+            L4: R3_B
         L3: R3_T
         L3: R3_CO
         L3: R3_C=S
     L2: R4
+        L3: R4_B
         L3: R4_S
             L4: R4_S_D
             L4: R4_S_T
@@ -2502,3 +2548,78 @@ u"""
 """,
 )
 
+forbidden(
+    label = "R5_B",
+    group = 
+"""
+1      Cd ux {2,D} {6,S}
+2  *1  Cd u1 {1,D} {3,S}
+3  *4  Cd ux {2,S} {4,D}
+4  *5  Cd ux {3,D} {5,S}
+5  *2  Cd u0 {4,S} {6,D}
+6  *3  Cd u0 {5,D} {1,S}
+""",
+    shortDesc = u"""R5_benzene""",
+    longDesc = 
+u"""
+Ban long route internal cyclization in benzene ring (should be R3)
+""",
+)
+
+forbidden(
+    label = "R3_B_isomer",
+    group = 
+"""
+1 *2 Cd u0 {2,S} {3,D}
+2 *1 Cs u1 {1,S} {5,S}
+3 *3 Cd u0 {1,D} {4,S}
+4 Cd ux {3,S} {6,D}
+5 Cd ux {2,S} {6,D}
+6 Cdd u0 {4,D} {5,D}
+""",
+    shortDesc = u"""R3_benzene_isomer""",
+    longDesc = 
+u"""
+Ban internal cyclization within a benzene ring isomer.
+We don't ban this path for normal benzyl structure.
+""",
+)
+
+
+forbidden(
+    label = "R3_B_isomer2",
+    group = 
+"""
+1   Cd ux {2,S} {3,D}
+2 *1 Cs u1 {1,S} {5,S}
+3   Cd ux {1,D} {4,S}
+4   Cd ux {3,S} {6,D}
+5 *2 Cd u0 {2,S} {6,D}
+6 *3 Cdd u0 {4,D} {5,D}
+""",
+    shortDesc = u"""R3_benzene_isomer2""",
+    longDesc = 
+u"""
+Ban internal cyclization within a benzene ring isomer.
+We don't ban this path for normal benzyl structure.
+""",
+)
+
+forbidden(
+    label = "R5_B_isomer3",
+    group = 
+"""
+1 *4 Cd ux {2,S} {3,D}
+2 *1 Cs u1 {1,S} {5,S}
+3 *5 Cd ux {1,D} {4,S}
+4 *2 Cd u0 {3,S} {6,D}
+5 Cd ux {2,S} {6,D}
+6 *3 Cdd u0 {4,D} {5,D}
+""",
+    shortDesc = u"""R5_benzene_isomer""",
+    longDesc = 
+u"""
+Ban internal cyclization within a benzene ring isomer.
+We don't ban this path for normal benzyl structure.
+""",
+)
