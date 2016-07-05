@@ -2805,3 +2805,219 @@ u"""
 Ban internal cyclization within a phenyl isomer.
 """,
 )
+
+forbidden(
+    label = "Benzyl_isomer1_R3",
+    group = 
+"""
+1 *1 C u1 {2,S}
+2 *2 Cd u0 {1,S} {3,D} {7,S}
+3 *3 Cd u0 {2,D} {4,S}
+4 Cd ux {3,S} {5,D}
+5 Cd ux {4,D} {6,S}
+6 Cd ux {5,S} {7,D}
+7 Cd ux {2,S} {6,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer1_R4",
+    group = 
+"""
+1 *1 C u1 {2,S}
+2 *4 Cd ux {1,S} {3,D} {7,S}
+3 Cd ux {2,D} {4,S}
+4 Cd ux {3,S} {5,D}
+5 Cd ux {4,D} {6,S}
+6 *3 Cd u0 {5,S} {7,D}
+7 *2 Cd u0 {2,S} {6,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer1_R5",
+    group = 
+"""
+1 *1 C u1 {2,S}
+2 *4 Cd u0 {1,S} {3,D} {7,S}
+3 *5 Cd u0 {2,D} {4,S}
+4 *2 Cd ux {3,S} {5,D}
+5 *3 Cd ux {4,D} {6,S}
+6 Cd ux {5,S} {7,D}
+7 Cd ux {2,S} {6,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer1_R6",
+    group = 
+"""
+1 *1 C u1 {2,S}
+2 *4 Cd ux {1,S} {3,D} {7,S}
+3 Cd ux {2,D} {4,S}
+4 *3 Cd u0 {3,S} {5,D}
+5 *2 Cd u0 {4,D} {6,S}
+6 *5 Cd ux {5,S} {7,D}
+7 *6 Cd ux {2,S} {6,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer1_R7",
+    group = 
+"""
+1 *1 C u1 {2,S}
+2 *4 Cd u0 {1,S} {3,D} {7,S}
+3 *6 Cd u0 {2,D} {4,S}
+4 *7 Cd ux {3,S} {5,D}
+5 *5 Cd ux {4,D} {6,S}
+6 *2 Cd ux {5,S} {7,D}
+7 *3 Cd ux {2,S} {6,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer2_R3A",
+    group = 
+"""
+1 *2 Cd u0 {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 Cd ux {1,S} {6,D}
+4 Cd ux {2,S} {5,D}
+5 Cd ux {4,D} {6,S}
+6 Cd ux {3,D} {5,S}
+7 *3 Cd 0 {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer2_R3B",
+    group = 
+"""
+1 Cd ux {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 Cd ux {1,S} {6,D}
+4 *2 Cd u0 {2,S} {5,D}
+5 *3 Cd u0 {4,D} {6,S}
+6 Cd ux {3,D} {5,S}
+7 Cd ux {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer2_R4",
+    group = 
+"""
+1 *4 Cd ux {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *2 Cd u0 {1,S} {6,D}
+4 Cd ux {2,S} {5,D}
+5 Cd ux {4,D} {6,S}
+6 *3 Cd u0 {3,D} {5,S}
+7    Cd ux {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer2_R5",
+    group = 
+"""
+1 Cd ux {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *3 Cd u0 {1,S} {6,D}
+4 *4 Cd ux {2,S} {5,D}
+5 *5 Cd ux {4,D} {6,S}
+6 *2 Cd u0 {3,D} {5,S}
+7 Cd ux {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer2_R7",
+    group = 
+"""
+1 *2 Cd u0 {2,S} {3,S} {7,D}
+2 *1 Cs u1 {1,S} {4,S}
+3 *5 Cd ux {1,S} {6,D}
+4 *4 Cd ux {2,S} {5,D}
+5 *6 Cd ux {4,D} {6,S}
+6 *7 Cd ux {3,D} {5,S}
+7 *3 Cd u0 {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer3_R3",
+    group = 
+"""
+1 Cd ux {2,S} {3,S} {7,D}
+2 Cd ux {1,S} {4,D}
+3 *3 Cd u0 {1,S} {6,D}
+4 Cd ux {2,D} {5,S}
+5 *1 Cs u1 {4,S} {6,S}
+6 *2 Cd u0 {3,D} {5,S}
+7 Cd ux {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
+
+forbidden(
+    label = "Benzyl_isomer3_R5",
+    group = 
+"""
+1 *2 Cd u0 {2,S} {3,S} {7,D}
+2 Cd ux {1,S} {4,D}
+3 *5 Cd ux {1,S} {6,D}
+4 Cd ux {2,D} {5,S}
+5 *1 Cs u1 {4,S} {6,S}
+6 *4 Cd ux {3,D} {5,S}
+7 *3 Cd u0 {1,D}
+""", 
+    longDesc = 
+u"""
+Ban internal cyclization within a benzyl isomer
+""",
+)
