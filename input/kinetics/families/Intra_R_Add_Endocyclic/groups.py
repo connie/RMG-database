@@ -71,8 +71,7 @@ entry(
 )
 
 
-entry(
-    index = 5,
+forbidden(
     label = "R3_B",
     group = 
 """
@@ -88,8 +87,7 @@ entry(
 u"""
 Internal cyclization within a benzene ring. Should be extremely slow
 in forward direction.
-""",    
-    kinetics = None,
+""",
 )
 
 
@@ -142,8 +140,7 @@ entry(
     kinetics = None,
 )
 
-entry(
-    index = 9,
+forbidden(
     label = "R4_B",
     group = 
 """
@@ -160,7 +157,6 @@ u"""
 Internal cyclization within a phenyl ring.  Should be extremely slow
 in the forward direction.
 """,
-    kinetics = None,
 )
 
 entry(
@@ -2504,12 +2500,10 @@ tree(
 L1: Rn
     L2: R3
         L3: R3_D
-            L4: R3_B
         L3: R3_T
         L3: R3_CO
         L3: R3_C=S
     L2: R4
-        L3: R4_B
         L3: R4_S
             L4: R4_S_D
                 L5: R4_Cs_RR_D
