@@ -1295,3 +1295,44 @@ coefficient computed TST with Eckart Tunnelling"
 """,
 )
 
+
+
+entry(
+    index = 53,
+    label = "C9H11 <=> C9H11-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(6.31e+06, 's^-1'), n=1.17, Ea=(28.33, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: ipso""",
+    longDesc = 
+u"""
+Taken from entry: R2 <=> CH3C8H8
+""",
+)
+
+entry(
+    index = 54,
+    label = "C10H13 <=> C10H13-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(251000, 's^-1'), n=1.22, Ea=(12.69, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: ipso""",
+    longDesc = 
+u"""
+Taken from entry: R4 <=> CH3C9H10
+""",
+)
+
+entry(
+    index = 55,
+    label = "C11H15 <=> C11H15-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(A=(2750, 's^-1'), n=1.32, Ea=(8.21, 'kcal/mol'), T0=(1, 'K')),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: ipso""",
+    longDesc = 
+u"""
+Taken from entry: R6 <=> CH3C10H12
+""",
+)
+
