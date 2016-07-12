@@ -1194,3 +1194,77 @@ Taken from entry: prod4 <=> naphthalene + H
 """,
 )
 
+
+
+entry(
+    index = 73,
+    label = "C6H6-2 + CH3 <=> C7H9-8",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2195, 'cm^3/(mol*s)'),
+        n = 2.878,
+        Ea = (10.912, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+    longDesc = 
+u"""
+Taken from entry: BZ + CH3 <=> T1
+""",
+)
+
+entry(
+    index = 74,
+    label = "C7H8-5 + H <=> C7H9-9",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (2.741e+06, 'cm^3/(mol*s)'),
+        n = 1.768,
+        Ea = (5.815, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+    longDesc = 
+u"""
+Taken from entry: TOL + H <=> T1
+""",
+)
+
+entry(
+    index = 75,
+    label = "C9H8-3 + H <=> C9H9",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.186e+08, 'cm^3/(mol*s)'),
+        n = 1.554,
+        Ea = (7.801, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+    longDesc = 
+u"""
+Taken from entry: Indene + H <=> T5
+""",
+)
+
+entry(
+    index = 76,
+    label = "C9H8-4 + H <=> C9H9-2",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (1.54e+08, 'cm^3/(mol*s)'),
+        n = 1.5,
+        Ea = (5.215, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+    longDesc = 
+u"""
+Taken from entry: Indene + H <=> B4
+""",
+)
+
