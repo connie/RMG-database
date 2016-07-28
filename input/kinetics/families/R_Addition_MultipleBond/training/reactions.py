@@ -1268,3 +1268,41 @@ Taken from entry: Indene + H <=> B4
 """,
 )
 
+
+
+entry(
+    index = 77,
+    label = "C6H6-2 + C2H5 <=> C8H11",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (95.0702, 'cm^3/(mol*s)'),
+        n = 2.81009,
+        Ea = (8.113, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
+    longDesc = 
+u"""
+Taken from entry: benzene + ethyl_rad <=> p1
+""",
+)
+
+entry(
+    index = 78,
+    label = "C6H6-2 + C3H7 <=> C9H13",
+    degeneracy = 1,
+    kinetics = Arrhenius(
+        A = (25.1406, 'cm^3/(mol*s)'),
+        n = 2.87846,
+        Ea = (6.703, 'kcal/mol'),
+        T0 = (1, 'K'),
+    ),
+    rank = 3,
+    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
+    longDesc = 
+u"""
+Taken from entry: benzene + propyl_rad <=> p2
+""",
+)
+
