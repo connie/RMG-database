@@ -1681,43 +1681,43 @@ Doublebond found in benzene.  Only 1 bond is in the final cycle.
     kinetics = None,
 )
 
-entry(
-    index = 5,
-    label = "doublebond_intra_secDe_benzene_2bond_R4",
-    group = 
-"""
-1      Cd ux {2,D} {6,S}
-2      Cd ux {1,D} {3,S}
-3      Cd ux {2,S} {4,D}
-4  *4  Cd ux {3,D} {5,S}
-5  *2  Cd u0 {4,S} {6,D}
-6  *3  Cd u0 {5,D} {1,S}
-""",
-    longDesc = 
-u"""
-Doublebond found in benzene.  2 bonds are part of final cycle.  For R4 rings.
-""",    
-    kinetics = None,
-)
+# entry(
+#     index = 5,
+#     label = "doublebond_intra_secDe_benzene_2bond_R4",
+#     group = 
+# """
+# 1      Cd ux {2,D} {6,S}
+# 2      Cd ux {1,D} {3,S}
+# 3      Cd ux {2,S} {4,D}
+# 4  *4  Cd ux {3,D} {5,S}
+# 5  *2  Cd u0 {4,S} {6,D}
+# 6  *3  Cd u0 {5,D} {1,S}
+# """,
+#     longDesc = 
+# u"""
+# Doublebond found in benzene.  2 bonds are part of final cycle.  For R4 rings.
+# """,    
+#     kinetics = None,
+# )
 
-entry(
-    index = 5,
-    label = "doublebond_intra_secDe_benzene_2bond_other",
-    group = 
-"""
-1      Cd ux {2,D} {6,S}
-2      Cd ux {1,D} {3,S}
-3      Cd ux {2,S} {4,D}
-4  *5  Cd ux {3,D} {5,S}
-5  *2  Cd u0 {4,S} {6,D}
-6  *3  Cd u0 {5,D} {1,S}
-""",
-    longDesc = 
-u"""
-Doublebond found in benzene.  2 bonds are part of final cycle.  For R5-R9 rings.
-""",    
-    kinetics = None,
-)
+# entry(
+#     index = 5,
+#     label = "doublebond_intra_secDe_benzene_2bond_other",
+#     group = 
+# """
+# 1      Cd ux {2,D} {6,S}
+# 2      Cd ux {1,D} {3,S}
+# 3      Cd ux {2,S} {4,D}
+# 4  *5  Cd ux {3,D} {5,S}
+# 5  *2  Cd u0 {4,S} {6,D}
+# 6  *3  Cd u0 {5,D} {1,S}
+# """,
+#     longDesc = 
+# u"""
+# Doublebond found in benzene.  2 bonds are part of final cycle.  For R5-R9 rings.
+# """,    
+#     kinetics = None,
+# )
 
 # entry(
 #     index = 5,
@@ -2751,8 +2751,6 @@ L1: Rn
 L1: multiplebond_intra
     L2: doublebond_intra
         L3: doublebond_intra_secDe_benzene_1bond
-        L3: doublebond_intra_secDe_benzene_2bond_R4
-        L3: doublebond_intra_secDe_benzene_2bond_other
         L3: doublebond_intra_pri
             L4: doublebond_intra_pri_2H
             L4: doublebond_intra_pri_HNd
@@ -2823,7 +2821,8 @@ L1: radadd_intra
 """
 )
 
-
+        # L3: doublebond_intra_secDe_benzene_2bond_R4
+        # L3: doublebond_intra_secDe_benzene_2bond_other
         # L3: doublebond_intra_secDe_benzene_3bond_R5
         # L3: doublebond_intra_secDe_benzene_3bond_R6
         # L3: doublebond_intra_secDe_benzene_3bond_R7
@@ -3145,6 +3144,40 @@ forbidden(
 u"""
 Ban internal cyclization within a benzyl isomer
 """,
+)
+
+forbidden(
+    label = "doublebond_intra_secDe_benzene_2bond_R4",
+    group = 
+"""
+1      Cd ux {2,D} {6,S}
+2      Cd ux {1,D} {3,S}
+3      Cd ux {2,S} {4,D}
+4  *4  Cd ux {3,D} {5,S}
+5  *2  Cd u0 {4,S} {6,D}
+6  *3  Cd u0 {5,D} {1,S}
+""",
+    longDesc = 
+u"""
+Doublebond found in benzene.  2 bonds are part of final cycle.  For R4 rings.
+""",    
+)
+
+forbidden(
+    label = "doublebond_intra_secDe_benzene_2bond_other",
+    group = 
+"""
+1      Cd ux {2,D} {6,S}
+2      Cd ux {1,D} {3,S}
+3      Cd ux {2,S} {4,D}
+4  *5  Cd ux {3,D} {5,S}
+5  *2  Cd u0 {4,S} {6,D}
+6  *3  Cd u0 {5,D} {1,S}
+""",
+    longDesc = 
+u"""
+Doublebond found in benzene.  2 bonds are part of final cycle.  For R5-R9 rings.
+""",    
 )
 
 forbidden(
