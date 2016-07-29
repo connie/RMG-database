@@ -2391,73 +2391,73 @@ entry(
     kinetics = None,
 )
 
-entry(
-    index = 1147,
-    label = "Cds_Cds_benzene",
-    group = 
-"""
-1 *1 Cd u0 {2,D} {3,S} {8,S}
-2 *2 Cd u0 {1,D} {4,S} {5,S}
-3    Cd ux {1,S} {7,D}
-4    R  u0 {2,S}
-5    Cd u0 {2,S} {6,D} 
-6    Cd ux {5,D} {7,S}
-7    Cd ux {6,S} {3,D}
-8    R  ux {1,S}
-""",
-    kinetics = None,
-)
+# entry(
+#     index = 1147,
+#     label = "Cds_Cds_benzene",
+#     group = 
+# """
+# 1 *1 Cd u0 {2,D} {3,S} {8,S}
+# 2 *2 Cd u0 {1,D} {4,S} {5,S}
+# 3    Cd ux {1,S} {7,D}
+# 4    R  u0 {2,S}
+# 5    Cd u0 {2,S} {6,D} 
+# 6    Cd ux {5,D} {7,S}
+# 7    Cd ux {6,S} {3,D}
+# 8    R  ux {1,S}
+# """,
+#     kinetics = None,
+# )
 
-entry(
-    index = 1148,
-    label = "Cds-CdH_Cds-CdR_benzene",
-    group = 
-"""
-1 *1 Cd u0 {2,D} {3,S} {8,S}
-2 *2 Cd u0 {1,D} {4,S} {5,S}
-3    Cd u0 {1,S} {7,D}
-4    R  u0 {2,S}
-5    Cd u0 {2,S} {6,D} 
-6    Cd u0 {5,D} {7,S}
-7    Cd u0 {6,S} {3,D}
-8    H  u0 {1,S}
-""",
-    kinetics = None,
-)
+# entry(
+#     index = 1148,
+#     label = "Cds-CdH_Cds-CdR_benzene",
+#     group = 
+# """
+# 1 *1 Cd u0 {2,D} {3,S} {8,S}
+# 2 *2 Cd u0 {1,D} {4,S} {5,S}
+# 3    Cd u0 {1,S} {7,D}
+# 4    R  u0 {2,S}
+# 5    Cd u0 {2,S} {6,D} 
+# 6    Cd u0 {5,D} {7,S}
+# 7    Cd u0 {6,S} {3,D}
+# 8    H  u0 {1,S}
+# """,
+#     kinetics = None,
+# )
 
-entry(
-    index = 1149,
-    label = "Cds-CdCs_Cds-CdR_benzene",
-    group = 
-"""
-1 *1 Cd u0 {2,D} {3,S} {8,S}
-2 *2 Cd u0 {1,D} {4,S} {5,S}
-3    Cd u0 {1,S} {7,D}
-4    R  u0 {2,S}
-5    Cd u0 {2,S} {6,D} 
-6    Cd u0 {5,D} {7,S}
-7    Cd u0 {6,S} {3,D}
-8    Cs u0 {1,S}
-""",
-    kinetics = None,
-)
+# entry(
+#     index = 1149,
+#     label = "Cds-CdCs_Cds-CdR_benzene",
+#     group = 
+# """
+# 1 *1 Cd u0 {2,D} {3,S} {8,S}
+# 2 *2 Cd u0 {1,D} {4,S} {5,S}
+# 3    Cd u0 {1,S} {7,D}
+# 4    R  u0 {2,S}
+# 5    Cd u0 {2,S} {6,D} 
+# 6    Cd u0 {5,D} {7,S}
+# 7    Cd u0 {6,S} {3,D}
+# 8    Cs u0 {1,S}
+# """,
+#     kinetics = None,
+# )
 
-entry(
-    index = 1150,
-    label = "Cds-CdCd_Cds-CdR_benzene",
-    group = 
-"""
-1 *1 Cd u0 {2,D} {3,S} {8,S}
-2 *2 Cd u0 {1,D} {4,S} {5,S}
-3    Cd u0 {1,S} {7,D}
-4    R  u0 {2,S}
-5    Cd u0 {2,S} {6,D} 
-6    Cd u0 {5,D} {7,S}
-7    Cd u0 {6,S} {3,D}
-8    Cd u0 {1,S}
-""",
-    kinetics = None,
-)
+# entry(
+#     index = 1150,
+#     label = "Cds-CdCd_Cds-CdR_benzene",
+#     group = 
+# """
+# 1 *1 Cd u0 {2,D} {3,S} {8,S}
+# 2 *2 Cd u0 {1,D} {4,S} {5,S}
+# 3    Cd u0 {1,S} {7,D}
+# 4    R  u0 {2,S}
+# 5    Cd u0 {2,S} {6,D} 
+# 6    Cd u0 {5,D} {7,S}
+# 7    Cd u0 {6,S} {3,D}
+# 8    Cd u0 {1,S}
+# """,
+#     kinetics = None,
+# )
 
 entry(
     index = 165,
@@ -16819,10 +16819,6 @@ L1: R_R
                 L5: Cds-NonDeH_N3d
                 L5: Cds-NonDe2_N3d
         L3: Cds_Cds
-            L4: Cds_Cds_benzene
-                L5: Cds-CdH_Cds-CdR_benzene
-                L5: Cds-CdCs_Cds-CdR_benzene
-                L5: Cds-CdCd_Cds-CdR_benzene
             L4: Cds-HH_Cds
                 L5: Cds-HH_Cds-HH
                 L5: Cds-HH_Cds-CsH
@@ -17799,6 +17795,12 @@ L1: YJ
 """
 )
 
+
+            # L4: Cds_Cds_benzene
+            #     L5: Cds-CdH_Cds-CdR_benzene
+            #     L5: Cds-CdCs_Cds-CdR_benzene
+            #     L5: Cds-CdCd_Cds-CdR_benzene
+
 forbidden(
     label = "O2d",
     group = 
@@ -17813,23 +17815,23 @@ u"""
 """,
 )
 
-# forbidden(
-#     label = "benzene_doublebond",
-#     group = 
-# """
-# 1 *1 Cd u0 {2,D} {6,S}
-# 2 *2 Cd u0 {1,D} {3,S}
-# 3    Cd ux {2,S} {4,D}
-# 4    Cd ux {3,D} {5,S}
-# 5    Cd ux {4,S} {6,D}
-# 6    Cd ux {5,D} {1,S}
-# """,
-#     shortDesc = u"""""",
-#     longDesc = 
-# u"""
+forbidden(
+    label = "benzene_doublebond",
+    group = 
+"""
+1 *1 Cd u0 {2,D} {6,S}
+2 *2 Cd u0 {1,D} {3,S}
+3    Cd ux {2,S} {4,D}
+4    Cd ux {3,D} {5,S}
+5    Cd ux {4,S} {6,D}
+6    Cd ux {5,D} {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc = 
+u"""
 
-# """,
-# )
+""",
+)
 
 
 

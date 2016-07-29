@@ -368,31 +368,31 @@ Taken from entry: addD <=> CPD + C2H3
 """,
 )
 
-entry(
-    index = 17,
-    label = "C7H9-8 <=> C6H6-2 + CH3",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(2.07e+11, 's^-1'), n=0.83, Ea=(22.8, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
-    longDesc = 
-u"""
-Taken from entry: product2 <=> BENZENE + CH3
-""",
-)
+# entry(
+#     index = 17,
+#     label = "C7H9-8 <=> C6H6-2 + CH3",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(2.07e+11, 's^-1'), n=0.83, Ea=(22.8, 'kcal/mol'), T0=(1, 'K')),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+#     longDesc = 
+# u"""
+# Taken from entry: product2 <=> BENZENE + CH3
+# """,
+# )
 
-entry(
-    index = 18,
-    label = "C7H9-9 <=> C7H8-5 + H",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(1.03e+09, 's^-1'), n=1.36, Ea=(26.5, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
-    longDesc = 
-u"""
-Taken from entry: product2 <=> TOLUENE + H
-""",
-)
+# entry(
+#     index = 18,
+#     label = "C7H9-9 <=> C7H8-5 + H",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(1.03e+09, 's^-1'), n=1.36, Ea=(26.5, 'kcal/mol'), T0=(1, 'K')),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: vinylCPD_H""",
+#     longDesc = 
+# u"""
+# Taken from entry: product2 <=> TOLUENE + H
+# """,
+# )
 
 entry(
     index = 19,
@@ -865,18 +865,18 @@ Taken from entry: pdt11 + H <=> pdt10bis
 """,
 )
 
-entry(
-    index = 53,
-    label = "C10H11-4 <=> C6H6-2 + C4H5-2",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(7.14e+12, 's^-1'), n=0.52, Ea=(22.9, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: C10H11""",
-    longDesc = 
-u"""
-Taken from entry: pdt12 <=> benzene + butadieneyl
-""",
-)
+# entry(
+#     index = 53,
+#     label = "C10H11-4 <=> C6H6-2 + C4H5-2",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(7.14e+12, 's^-1'), n=0.52, Ea=(22.9, 'kcal/mol'), T0=(1, 'K')),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: C10H11""",
+#     longDesc = 
+# u"""
+# Taken from entry: pdt12 <=> benzene + butadieneyl
+# """,
+# )
 
 entry(
     index = 54,
@@ -1112,18 +1112,18 @@ Taken from entry: FULVENE + H <=> C5H5CH2-2
 """,
 )
 
-entry(
-    index = 68,
-    label = "C6H7-8 <=> C6H6-2 + H",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(1.84e+09, 's^-1'), n=1.3, Ea=(27.4, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: Fulvene_H""",
-    longDesc = 
-u"""
-Taken from entry: cyC6H7 <=> benzene + H
-""",
-)
+# entry(
+#     index = 68,
+#     label = "C6H7-8 <=> C6H6-2 + H",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(1.84e+09, 's^-1'), n=1.3, Ea=(27.4, 'kcal/mol'), T0=(1, 'K')),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: Fulvene_H""",
+#     longDesc = 
+# u"""
+# Taken from entry: cyC6H7 <=> benzene + H
+# """,
+# )
 
 
 
@@ -1181,128 +1181,128 @@ Taken from entry: biCPD3ene + H <=> adductc
 """,
 )
 
-entry(
-    index = 72,
-    label = "C10H9-4 <=> C10H8-4 + H",
-    degeneracy = 1,
-    kinetics = Arrhenius(A=(1.34e+08, 's^-1'), n=1.55, Ea=(15.3, 'kcal/mol'), T0=(1, 'K')),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: naphthalene_H""",
-    longDesc = 
-u"""
-Taken from entry: prod4 <=> naphthalene + H
-""",
-)
+# entry(
+#     index = 72,
+#     label = "C10H9-4 <=> C10H8-4 + H",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(1.34e+08, 's^-1'), n=1.55, Ea=(15.3, 'kcal/mol'), T0=(1, 'K')),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: naphthalene_H""",
+#     longDesc = 
+# u"""
+# Taken from entry: prod4 <=> naphthalene + H
+# """,
+# )
 
 
 
-entry(
-    index = 73,
-    label = "C6H6-2 + CH3 <=> C7H9-8",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (2195, 'cm^3/(mol*s)'),
-        n = 2.878,
-        Ea = (10.912, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
-    longDesc = 
-u"""
-Taken from entry: BZ + CH3 <=> T1
-""",
-)
+# entry(
+#     index = 73,
+#     label = "C6H6-2 + CH3 <=> C7H9-8",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (2195, 'cm^3/(mol*s)'),
+#         n = 2.878,
+#         Ea = (10.912, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+#     longDesc = 
+# u"""
+# Taken from entry: BZ + CH3 <=> T1
+# """,
+# )
 
-entry(
-    index = 74,
-    label = "C7H8-5 + H <=> C7H9-9",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (2.741e+06, 'cm^3/(mol*s)'),
-        n = 1.768,
-        Ea = (5.815, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
-    longDesc = 
-u"""
-Taken from entry: TOL + H <=> T1
-""",
-)
+# entry(
+#     index = 74,
+#     label = "C7H8-5 + H <=> C7H9-9",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (2.741e+06, 'cm^3/(mol*s)'),
+#         n = 1.768,
+#         Ea = (5.815, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+#     longDesc = 
+# u"""
+# Taken from entry: TOL + H <=> T1
+# """,
+# )
 
-entry(
-    index = 75,
-    label = "C9H8-3 + H <=> C9H9",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (1.186e+08, 'cm^3/(mol*s)'),
-        n = 1.554,
-        Ea = (7.801, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
-    longDesc = 
-u"""
-Taken from entry: Indene + H <=> T5
-""",
-)
+# entry(
+#     index = 75,
+#     label = "C9H8-3 + H <=> C9H9",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (1.186e+08, 'cm^3/(mol*s)'),
+#         n = 1.554,
+#         Ea = (7.801, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+#     longDesc = 
+# u"""
+# Taken from entry: Indene + H <=> T5
+# """,
+# )
 
-entry(
-    index = 76,
-    label = "C9H8-4 + H <=> C9H9-2",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (1.54e+08, 'cm^3/(mol*s)'),
-        n = 1.5,
-        Ea = (5.215, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
-    longDesc = 
-u"""
-Taken from entry: Indene + H <=> B4
-""",
-)
+# entry(
+#     index = 76,
+#     label = "C9H8-4 + H <=> C9H9-2",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (1.54e+08, 'cm^3/(mol*s)'),
+#         n = 1.5,
+#         Ea = (5.215, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics""",
+#     longDesc = 
+# u"""
+# Taken from entry: Indene + H <=> B4
+# """,
+# )
 
 
 
-entry(
-    index = 77,
-    label = "C6H6-2 + C2H5 <=> C8H11",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (95.0702, 'cm^3/(mol*s)'),
-        n = 2.81009,
-        Ea = (8.113, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
-    longDesc = 
-u"""
-Taken from entry: benzene + ethyl_rad <=> p1
-""",
-)
+# entry(
+#     index = 77,
+#     label = "C6H6-2 + C2H5 <=> C8H11",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (95.0702, 'cm^3/(mol*s)'),
+#         n = 2.81009,
+#         Ea = (8.113, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
+#     longDesc = 
+# u"""
+# Taken from entry: benzene + ethyl_rad <=> p1
+# """,
+# )
 
-entry(
-    index = 78,
-    label = "C6H6-2 + C3H7 <=> C9H13",
-    degeneracy = 1,
-    kinetics = Arrhenius(
-        A = (25.1406, 'cm^3/(mol*s)'),
-        n = 2.87846,
-        Ea = (6.703, 'kcal/mol'),
-        T0 = (1, 'K'),
-    ),
-    rank = 3,
-    shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
-    longDesc = 
-u"""
-Taken from entry: benzene + propyl_rad <=> p2
-""",
-)
+# entry(
+#     index = 78,
+#     label = "C6H6-2 + C3H7 <=> C9H13",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(
+#         A = (25.1406, 'cm^3/(mol*s)'),
+#         n = 2.87846,
+#         Ea = (6.703, 'kcal/mol'),
+#         T0 = (1, 'K'),
+#     ),
+#     rank = 3,
+#     shortDesc = u"""Training reaction from kinetics library: R_Addition_Aromatics_QM""",
+#     longDesc = 
+# u"""
+# Taken from entry: benzene + propyl_rad <=> p2
+# """,
+# )
 
